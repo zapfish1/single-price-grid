@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+button {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center center;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-light-cyan: hsla(179, 62%, 43%, 0.774);
+  --color-bright-yellow: hsl(71, 73%, 54%);
+  --color-light-gray: hsl(204, 43%, 93%);
+  --color-transparent-light-gray: hsla(203, 44%, 93%, 0.655);
+  --color-transparent-light-gray-2: hsla(203, 44%, 93%, 0.862);
+  --color-grayish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+  font-family: "Karla", sans-serif;
+  background-color: var(--color-light-gray);
+}
+
+main {
+  display: grid;
+  box-shadow: var(--color-transparent-light-gray) 0px 50px 100px -20px,
+    var(--color-transparent-light-gray) 0px 30px 60px -30px;
+  width: 20rem;
+  margin: 4rem 0rem 4rem 0rem;
+}
+
+.join {
+  padding: 2.5rem;
+  background-color: white;
+
+  display: grid;
+  gap: 1rem;
+
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.join h1 {
+  color: var(--color-cyan);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.join h2 {
+  color: var(--color-bright-yellow);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.join p {
+  color: var(--color-grayish-blue);
+}
+
+.subscription {
+  background-color: var(--color-cyan);
+  padding: 2.5rem;
+
+  color: white;
+
+  display: grid;
+  gap: 1rem;
+}
+
+.subscription h1 {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.subscription .price {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.subscription .price p:first-child {
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+}
+
+.subscription .price p:last-child {
+  color: var(--color-transparent-light-gray);
+}
+
+.subscription button {
+  background-color: var(--color-bright-yellow);
+  padding: 1rem;
+  font-weight: 700;
+  border-radius: 0.3rem;
+
+  box-shadow: var(--color-transparent-light-gray) 0px 50px 100px -20px,
+    var(--color-transparent-light-gray) 0px 30px 60px -30px;
+}
+
+.why-us {
+  padding: 2.5rem;
+  background-color: var(--color-light-cyan);
+
+  display: grid;
+  gap: 1rem;
+
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.why-us h1 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.why-us li {
+  color: var(--color-transparent-light-gray-2);
+}
+
+@media screen and (min-width: 1090px) {
+  main {
+    width: 50rem;
+  }
+
+  .join {
+    grid-area: join;
+  }
+
+  .subscription {
+    grid-area: subscription;
+
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .why-us {
+    grid-area: why-us;
+
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0em;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas:
+      "join join"
+      "subscription why-us";
+  }
+}
